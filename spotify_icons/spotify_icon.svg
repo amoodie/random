@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   width="512"
+   height="512"
+   sodipodi:docname="spotify_icon.svg"
+   inkscape:export-filename="/home/andrew/Desktop/spotify-linux-16.png"
+   inkscape:export-xdpi="2.8099999"
+   inkscape:export-ydpi="2.8099999">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1857"
+     inkscape:window-height="1056"
+     id="namedview4"
+     showgrid="false"
+     inkscape:zoom="0.65186406"
+     inkscape:cx="60.848525"
+     inkscape:cy="219.59494"
+     inkscape:window-x="63"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <path
+     style="color:#000000;fill:#dfdbd2;fill-opacity:1;stroke:#000000;stroke-width:0.188;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="M 255.59375 42.28125 C 136.65856 42.28125 40.25 138.72106 40.25 257.65625 C 40.25 376.59144 136.65856 473 255.59375 473 C 374.52894 473 470.9375 376.59144 470.9375 257.65625 C 470.9375 138.72106 374.52894 42.28125 255.59375 42.28125 z M 250.875 141.375 C 258.52159 141.38203 266.53272 141.49757 274.9375 141.71875 C 394.47222 144.86441 432.21875 204.625 432.21875 204.625 C 435.59359 214.48739 432.56349 220.23882 430.125 222.46875 C 425.69275 226.522 420.28875 233.18792 385.03125 210.90625 C 335.32274 179.49195 237.1875 181.8125 237.1875 181.8125 C 237.1875 181.8125 180.5642 182.59765 150.15625 189.9375 C 119.74828 197.27736 96.669648 214.06142 88.28125 195.1875 C 79.892838 176.3136 107.15625 161.625 107.15625 161.625 L 113.84375 159.03125 C 113.84375 159.03125 147.97668 142.21359 243.34375 141.40625 C 245.81014 141.38537 248.32614 141.37266 250.875 141.375 z M 249.25 221.90625 C 255.18529 221.92615 261.38982 222.01766 267.84375 222.1875 C 371.1067 224.90495 403.71875 276.53125 403.71875 276.53125 C 406.63419 285.05111 404.01278 290.01111 401.90625 291.9375 C 398.07733 295.43898 393.42678 301.21734 362.96875 281.96875 C 320.02686 254.83076 235.875 255.875 235.875 255.875 C 235.875 255.875 186.33114 257.53429 160.0625 263.875 C 133.79385 270.21569 113.84027 284.67967 106.59375 268.375 C 99.347219 252.07032 122.90625 239.40625 122.90625 239.40625 L 128.6875 237.125 C 128.6875 237.125 160.22065 221.6077 249.25 221.90625 z M 231.90625 296.65625 C 238.57462 296.5998 245.70658 296.67567 253.28125 296.875 C 334.0777 299.00121 359.59375 339.375 359.59375 339.375 C 361.87488 346.04123 359.80447 349.93024 358.15625 351.4375 C 355.16038 354.17719 351.51889 358.71698 327.6875 343.65625 C 294.08829 322.42255 226.8125 323.9375 226.8125 323.9375 C 226.8125 323.9375 189.49097 324.50757 168.9375 329.46875 C 148.384 334.42993 132.79494 345.75733 127.125 333 C 121.45507 320.24267 139.875 310.34375 139.875 310.34375 L 144.375 308.5625 C 144.375 308.5625 167.44533 297.20195 231.90625 296.65625 z "
+     id="path2989" />
+</svg>
