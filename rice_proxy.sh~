@@ -8,7 +8,7 @@ then
     sudo /usr/sbin/vpnc RiceVPN.conf
 elif [ "$1" = "off" ]
 then
-    sudo vpnc­-disconnect
+    vpnc­-disconnect
 else
     echo "  input error -- one argument must be given"
     echo "  valid inputs: 'on' or 'off'"
