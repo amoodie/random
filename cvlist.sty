@@ -1,0 +1,99 @@
+% cvlist package for formatting references within a CV
+% 
+% (c) Andrew J. Moodie
+% andrewjmoodie.com
+%
+%% This program can be redistributed and/or modified under the terms
+%% of the LaTeX Project Public License Distributed from CTAN archives
+%% in directory macros/latex/base/lppl.txt.
+% 
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{cvlist}
+  [2011/01/11 v0.01 LaTeX package for my own purpose]
+
+% SET UP BIBLATEX %
+\usepackage[american]{babel} % load babel in american english
+\usepackage{csquotes} % for formatting I think?
+\usepackage[backend=biber,defernumbers=true,
+			labelnumber=true,sorting=ydnt,
+			maxbibnames=99,uniquename=false,
+			isbn=false]{biblatex} % load biblatex and define setup
+\setlength\bibitemsep{0.25\baselineskip} % item separation adjustment
+\DeclareLanguageMapping{american}{american-apa} 
+
+
+% change the order of where the date information comes from, this chooses pubstate first if it is available
+\DeclareLabeldate{%
+  \field{pubstate}
+  \field{date}
+  \literal{n.d.}
+}
+
+
+% renew the date macro, so that the pubstate is printed into the parentheses if it is present, otherwise the date is printed.
+% This code snippet is adapted from Andrew Swann at stackexchange
+% https://tex.stackexchange.com/questions/154363/biblatex-how-to-get-author-forthcoming-when-pubstate-forthcoming-is-set-in
+\renewbibmacro*{date}{%
+  \iffieldundef{\thefield{datelabelsource}year}
+    {\printtext{\printfield{pubstate}}}
+    {\printtext{%
+       \iffieldsequal{year}{\thefield{datelabelsource}year}
+         {\printdate}%
+         {\printfield{labelyear}%
+          \printfield{extrayear}}}}}%
+
+
+% renew the pubstate macro to not print a second time at end
+% This code snippet is adapted from Andrew Swann at stackexchange
+% https://tex.stackexchange.com/questions/154363/biblatex-how-to-get-author-forthcoming-when-pubstate-forthcoming-is-set-in
+\renewbibmacro*{addendum+pubstate}{%
+  \printfield{addendum}%
+  \iffieldundef{\thefield{datelabesource}year}{}
+  {\newunit\newblock\printfield{pubstate}}}
+
+
+% this set up counter definition for each printed group
+% this code snippet is adapted from Audrey at stackexchange
+% https://tex.stackexchange.com/questions/21401/biblatex-reverse-numbering-i-e-count-down
+\makeatletter
+\patchcmd{\blx@printbibliography}
+  {\blx@bibliography\blx@tempa}
+  {\setcounter{bibitemtotal}{0}%
+   \setlength{\labelnumberwidth}{0pt}%
+   \begingroup
+   \def\do##1{\stepcounter{bibitemtotal}}%
+   \dolistloop{\blx@tempa}%
+   \endgroup
+   \blx@setlabwidth{\labelnumberwidth}{%
+     \csuse{abx@ffd@*@labelnumberwidth}{\arabic{bibitemtotal}}}%
+   \blx@bibliography\blx@tempa}{}{}
+\makeatother
+
+% define how to print the numbers (as total+1-number)
+\newcounter{bibitemtotal}
+\newrobustcmd*{\mkbibdesc}[1]{%
+  \number\numexpr\value{bibitemtotal}+1-#1\relax}
+\DeclareFieldFormat{labelnumber}{\mkbibdesc{#1}}
+\DeclareFieldFormat{labelnumberwidth}{\mkbibbrackets{#1}}
+
+% some propoerties of the printing refs? unknown
+\defbibenvironment{bibliography}
+  {\list
+     {\printtext[labelnumberwidth]{\printfield{labelnumber}}}
+     {\setlength{\labelwidth}{\labelnumberwidth}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \setlength{\labelsep}{\biblabelsep}%
+      \addtolength{\leftmargin}{\labelsep}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \setlength{\parsep}{\bibparsep}}%
+      \renewcommand*{\makelabel}[1]{\hss##1}}
+  {\endlist}
+  {\item}
+
+% declare how to format the [link]s
+\DeclareFieldFormat{url}{\ifhyperref{\href{#1}{[link]}}{\url{#1}}}
+
+
+\endinput
+%%
+%% End of file `cvlist.sty'.
