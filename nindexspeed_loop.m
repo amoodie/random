@@ -1,11 +1,12 @@
 
 BV = zeros(10000, 10000);
 ne = numel(BV);
-rv = randi(ne, 10, 1);
+rv = randi(ne, 50, 1);
 
 t = NaN(size(rv));
 
 for i = 1:size(rv, 1)
+    i
     idx = rv(1:i);
     
     tic
